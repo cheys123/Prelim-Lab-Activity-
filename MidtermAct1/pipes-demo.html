@@ -1,0 +1,81 @@
+
+
+ <div>
+  This is a short date:- {{presentDate | date: 'shortDate' }} <br/>
+  This line shows the full date :- {{presentDate | date: 'fullDate' }} <br/>
+  This will show a formatted date:- {{presentDate | date: 'M/dd/yyyy' }} <br/>
+  This indicates the hours and minutes:- {{presentDate | date: 'h:mm' }} <br/>
+
+  <p> {{name | uppercase}}</p> <br/>
+</div>
+
+<div>
+  <h3> Chain Pipes </h3>
+  Date with uppercase :- {{presentDate | date: 'fullDate' | uppercase}} <br/>
+  Date with lowercase :- {{presentDate | date: 'fullDate' | lowercase}} <br/>
+</div>
+<div>
+
+   <h3> Currency Pipes</h3>
+   <p>{{price | currency}}</p>
+   <p>{{price | currency:'JPY': 'symbol': '1.0-0'}}</p>
+   <p>{{price | currency:'EUR': 'symbol': '2.2-4'}}</p>
+</div>
+<div>
+
+   <h3> Slice Pipes </h3>
+   <h3>Start Index:- {{Fruits | slice: 2}}</h3>
+   <h4>Start and end Index:- {{Fruits | slice: 1: 4}}</h4>
+   <h5>Negative Index:- {{Fruits | slice: -2}}</h5>
+   <h6>Negative start and end index:- {{Fruits | slice: -4: -2}}</h6>
+</div>
+
+<div>
+
+   <p> Apply formatting:- {{decimalNum1 | number: '1.1'}}</p>
+   <p> Apply formatting:- {{decimalNum2 | number: '1.1-4'}}</p>
+</div>
+
+<!--
+<div class="receipt">
+  <div class="store-name">PAMPANG MARKET</div>
+  <div class="store-info">
+    Fresh Goods & Local Products<br />
+    Angeles City Pampanga, Philippines
+  </div>
+
+  <div class="date">
+    {{ presentDate | date:'short' }}
+  </div>
+
+  <div class="divider">-----------------------------</div>
+
+  <div class="row">
+    <span>A5 Wagyu Steak</span>
+    <span>{{ price | number:'1.2-2' }}</span>
+  </div>
+
+  <div class="row">
+    <span>Salt & Pepper</span>
+    <span>{{ price2 | number:'1.2-2' }}</span>
+  </div>
+
+  <div class="row">
+    <span>Extra Sauce</span>
+    <span>{{ price3 | number:'1.2-2' }}</span>
+  </div>
+
+  <div class="divider">-----------------------------</div>
+
+  <div class="row total">
+    <span>TOTAL</span>
+    <span>{{ price + price2 + price3 | number:'1.2-2' }}</span>
+  </div>
+
+  <div class="divider">-----------------------------</div>
+
+  <div class="footer">
+    Thank you for shopping!<br />
+    Please come again
+  </div>
+</div> -->
